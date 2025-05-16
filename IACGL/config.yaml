@@ -1,0 +1,34 @@
+
+Caltech101-7:
+  k_contrast: 100
+  alpha: 10
+  gamma: -4
+  beta: -2
+
+Handwritten:
+  k_contrast: 50
+  alpha: 10
+  gamma: -4
+  beta: -1
+
+BBCSport:
+  k_contrast: 10
+  alpha: 20
+  gamma: -4
+  beta: -1
+
+Movies:
+  alpha: 3000
+  gama: -1
+
+Reuters:
+  k_contrast: 500
+  alpha: 10
+  gamma: -4
+  beta: -1
+
+WebKB:
+  k_contrast: 500
+  alpha: 10
+  gamma: -4
+  beta: -1
