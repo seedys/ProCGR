@@ -527,7 +527,7 @@ def generate_multiview_outliers_py(mat_file_path, a, b, c):
     print('Outlier generation complete.')
     return X_outlier, Y_outlier 
 
-# --- IAMOD Core Algorithm ---
+# --- ProCGR Core Algorithm ---
 def calculate_laplacian(adj_matrix):
     """Calculates the normalized Laplacian L=I-D^{-1/2}(A+I)D^{-1/2} from an adjacency matrix."""
     N = adj_matrix.shape[0]
@@ -565,7 +565,7 @@ def graph_filtering(X_v, k_filt, s, m):
 # MODIFIED run_cmod to calculate AUC per epoch
 def run_cmod(X_list, Y_outlier, V, N, k_contrast, alpha, gamma, beta, s, m, learning_rate=0.001, epochs=50):
     """
-    Runs IAMOD and calculates AUC per epoch.
+    Runs ProCGR and calculates AUC per epoch.
     
     Args:
         X_list (list): List of input feature matrices per view.
@@ -787,7 +787,7 @@ if __name__ == "__main__":
     # gama = config_data['{}'.format(dataname)]['gama']
     # beta = config_data['{}'.format(dataname)]['beta']
     
-    print("--- IAMOD Algorithm Execution with Epoch AUC Monitoring ---")
+    print("--- ProCGR Algorithm Execution with Epoch AUC Monitoring ---")
 
     # --- Generate Data with Outliers ---
     try:
@@ -798,7 +798,7 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\nError during data generation: {e}\nExiting."); exit()
 
-    # --- Run IAMOD Algorithm ---
+    # --- Run ProCGR Algorithm ---
     try:
         # Pass Y_outlier to run_cmod now
         max_auc_result, best_epoch_result, final_epoch_scores, final_S_matrix = run_cmod(
