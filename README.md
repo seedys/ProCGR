@@ -1,1 +1,1 @@
-# ProCGR: Inconsistency-Aware Contrastive Graph Learning for Multi-View Outlier Detection
+# ProCGR: Learning from Stable Structures: Proactive Contrastive Graph Reconstruction for Multi-View Outlier Detection
