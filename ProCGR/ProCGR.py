@@ -770,9 +770,9 @@ if __name__ == "__main__":
         print(f"Warning: MAT file not found at '{mat_file_path}'. Exiting.") 
         exit() 
 
-    proportion_a = 0.05      # Proportion of attribute outliers
+    proportion_a = 0.02      # Proportion of attribute outliers
     proportion_b = 0.05      # Proportion of class outliers
-    proportion_c = 0.05      # Proportion of class-attribute outliers
+    proportion_c = 0.08      # Proportion of class-attribute outliers
     
     # default parameters
     s = 0.5
@@ -782,10 +782,10 @@ if __name__ == "__main__":
     
     f = open('config.yaml')
     config_data = yaml.safe_load(f)
-    # k_contrast = config_data['{}'.format(dataname)]['k_contrast']
-    # alpha = config_data['{}'.format(dataname)]['alpha']
-    # gama = config_data['{}'.format(dataname)]['gama']
-    # beta = config_data['{}'.format(dataname)]['beta']
+    k_contrast = config_data['{}'.format(dataname)]['k_contrast']
+    alpha = config_data['{}'.format(dataname)]['alpha']
+    gamma = config_data['{}'.format(dataname)]['gamma']
+    beta = config_data['{}'.format(dataname)]['beta']
     
     print("--- ProCGR Algorithm Execution with Epoch AUC Monitoring ---")
 
